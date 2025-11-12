@@ -2,8 +2,10 @@
 
 namespace Taskflow\Core;
 
+use Exception;
 use Taskflow\Services\Logger\ConsoleLogger;
 use Taskflow\Services\Logger\FileLogger;
+use Taskflow\Services\Logger\Logger;
 
 /**
  *
@@ -21,20 +23,16 @@ class LoggerFactory
 
     /**
      * @param string $type
-     * @return ConsoleLogger|FileLogger
-     * @throws \Exception
+     * @return Logger
+     * @throws Exception
      */
-    public static function create(string $type)
+    public static function create(string $type): Logger
     {
-        switch ($type) {
-            case self::FILELOGGER:
-                return new FileLogger();
-
-            case self::CONSOLELOGGER:
-                return new ConsoleLogger();
-            default:
-                throw new \Exception("Unknown logger type");
-        }
+        return match ($type) {
+            self::FILELOGGER => new FileLogger(),
+            self::CONSOLELOGGER => new ConsoleLogger(),
+            default => throw new Exception("Unknown logger type"),
+        };
     }
 
 }

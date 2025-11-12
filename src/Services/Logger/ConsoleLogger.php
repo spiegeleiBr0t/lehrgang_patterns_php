@@ -6,12 +6,13 @@ use Taskflow\Services\Logger\Logger;
 
 class ConsoleLogger implements Logger
 {
+    use LoggerHelper;
 
     /**
      * @inheritDoc
      */
     public function log(string $message): void
     {
-        // TODO: Implement log() method.
+        echo $this->formatLogMessage($message) . PHP_EOL;
     }
 }
