@@ -1,0 +1,1 @@
+https://patterns.notmuch.space

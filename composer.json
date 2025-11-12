@@ -1,0 +1,12 @@
+{
+    "name": "011s01/taskflow",
+    "autoload": {
+        "psr-4": {
+            "Taskflow\\": "src/"
+        }
+    },
+    "require": {
+      "ext-pdo": "*",
+      "ext-simplexml": "*"
+    }
+}

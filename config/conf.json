@@ -1,0 +1,7 @@
+{
+  "host": "localhost",
+  "db": "taskflow",
+  "user": "taskflow_user",
+  "pass": "DEIN_PASSWORT",
+  "charset": "utf8mb4"
+}
