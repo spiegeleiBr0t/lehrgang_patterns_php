@@ -41,7 +41,7 @@ class ItalicText extends TextDecorator{
 
 class UnderlineText extends TextDecorator{
     public function render(string $text):string{
-        return "<i>". parent::render($text) . "</i>";
+        return "<u>". parent::render($text) . "</u>";
     }
 }
 
