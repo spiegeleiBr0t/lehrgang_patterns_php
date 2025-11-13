@@ -18,9 +18,9 @@ class TimingDecorator implements Handler
         $response = $this->handler->handle($request);
         $endTime = microtime(true);
 
-        $execDurationTime = floatval((($endTime - $startTime)));
+        $execDurationTime = floatval((($endTime - $startTime)*1000));
 
-        $response['times'] =  'Overall time: '.$execDurationTime. ' seconds';
+        $response['times'] =  'Time Consumption: '.number_format($execDurationTime,3). 'ms';
 
         return $response;
     }

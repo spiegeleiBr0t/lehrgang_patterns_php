@@ -23,9 +23,9 @@ $invoker = new CommandInvoker();
 $handler = new TaskHandler($eventManager, $invoker);
 
 // Decorator-Stack aufbauen (von innen nach außen!) -> Nach und nach einkommentieren
- $handler = new LoggingDecorator($handler, $logger);
- $handler = new TimingDecorator($handler, $logger);
- $handler = new ErrorHandlingDecorator($handler);
+$handler = new ErrorHandlingDecorator($handler);
+$handler = new TimingDecorator($handler, $logger);
+$handler = new LoggingDecorator($handler, $logger);
 
 // Request bauen
 $request = [
