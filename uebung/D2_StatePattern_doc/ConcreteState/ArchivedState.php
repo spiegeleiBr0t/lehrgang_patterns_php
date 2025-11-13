@@ -1,10 +1,10 @@
 <?php
 
-namespace D2_StatePattern_doc\ConcreteState;
+namespace Uebung\D2_StatePattern_doc\ConcreteState;
 
-use D2_StatePattern_doc\Doc;
-use D2_StatePattern_doc\DocState;
-use D2_StatePattern_doc\StateHelper;
+use Uebung\D2_StatePattern_doc\Doc;
+use Uebung\D2_StatePattern_doc\DocState;
+use Uebung\D2_StatePattern_doc\StateHelper;
 
 class ArchivedState implements DocState
 {

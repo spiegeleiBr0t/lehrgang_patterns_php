@@ -1,8 +1,8 @@
 <?php
 
-namespace D2_StatePattern_doc;
+namespace Uebung\D2_StatePattern_doc;
 
-use D2_StatePattern_doc\ConcreteState\DraftState;
+use Uebung\D2_StatePattern_doc\ConcreteState\DraftState;
 
 class Doc
 {
@@ -31,6 +31,23 @@ class Doc
     public function getDocState(): DocState
     {
         return $this->docState;
+    }
+
+    /*
+     * Wrapper
+     */
+
+    public function submitForReview(): void{
+        $this->docState->submitForReview($this);
+    }
+    public function publish(): void{
+        $this->docState->publish($this);
+    }
+    public function archive(): void{
+        $this->docState->archive($this);
+    }
+    public function rejectReview(): void{
+        $this->docState->rejectReview($this);
     }
 
 }

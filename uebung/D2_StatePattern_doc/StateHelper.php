@@ -1,6 +1,6 @@
 <?php
 
-namespace D2_StatePattern_doc;
+namespace Uebung\D2_StatePattern_doc;
 
 trait StateHelper
 {
