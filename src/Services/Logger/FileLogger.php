@@ -12,6 +12,6 @@ class FileLogger implements Logger
      */
     public function log(string $message): void
     {
-        file_put_contents(__DIR__ . '/../../logs/app.log', $this->formatLogMessage($message) . PHP_EOL, FILE_APPEND);
+        file_put_contents(__DIR__ . '/../../../logs/app.log', $this->formatLogMessage($message) . PHP_EOL, FILE_APPEND);
     }
 }

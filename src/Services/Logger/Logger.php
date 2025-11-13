@@ -12,6 +12,4 @@ interface Logger
      * @return void
      */
     public function log(String $message):void;
-
-
 }
